@@ -1,0 +1,29 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/opulencecoin_bg.qm</file>
+        <file alias="ca">locale/opulencecoin_ca.qm</file>
+        <file alias="cs">locale/opulencecoin_cs.qm</file>
+        <file alias="da">locale/opulencecoin_da.qm</file>
+        <file alias="de">locale/opulencecoin_de.qm</file>
+        <file alias="en">locale/opulencecoin_en.qm</file>
+        <file alias="en_US">locale/opulencecoin_en_US.qm</file>
+        <file alias="es">locale/opulencecoin_es.qm</file>
+        <file alias="fi">locale/opulencecoin_fi.qm</file>
+        <file alias="fr_FR">locale/opulencecoin_fr_FR.qm</file>
+        <file alias="it">locale/opulencecoin_it.qm</file>
+        <file alias="ja">locale/opulencecoin_ja.qm</file>
+        <file alias="ko_KR">locale/opulencecoin_ko_KR.qm</file>
+        <file alias="nl">locale/opulencecoin_nl.qm</file>
+        <file alias="pl">locale/opulencecoin_pl.qm</file>
+        <file alias="pt">locale/opulencecoin_pt.qm</file>
+        <file alias="pt_BR">locale/opulencecoin_pt_BR.qm</file>
+        <file alias="ro_RO">locale/opulencecoin_ro_RO.qm</file>
+        <file alias="ru">locale/opulencecoin_ru.qm</file>
+        <file alias="sk">locale/opulencecoin_sk.qm</file>
+        <file alias="sv">locale/opulencecoin_sv.qm</file>
+        <file alias="tr">locale/opulencecoin_tr.qm</file>
+        <file alias="uk">locale/opulencecoin_uk.qm</file>
+        <file alias="zh_CN">locale/opulencecoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/opulencecoin_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=OpulenceCoin
+Comment=OpulenceCoin P2P Cryptocurrency
+Exec=opulencecoin-qt %u
+Terminal=false
+Type=Application
+Icon=opulencecoin128
+MimeType=x-scheme-handler/opulencecoin;
+Categories=Office;Finance;
+Name[en_US]=opulencecoin-qt.desktop
