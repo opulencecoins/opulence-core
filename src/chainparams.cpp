@@ -46,7 +46,6 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
         vSeedsOut.push_back(addr);
     }
 }
-
 //   What makes a good checkpoint block?
 // + Is surrounded by blocks with reasonable timestamps
 //   (no blocks before with a timestamp after, none after with
@@ -54,14 +53,13 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (     0, uint256("0x00000139a8214afaf90d1ae82e32c7bfe6fade180958d080174e8ccefe21a62e"))
-    ;
+    (     0, uint256(""));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1578141968, // * UNIX timestamp of last checkpoint block
-    1268338,    // * total number of transactions between genesis and last checkpoint (the tx=... number in the UpdateTip debug.log lines)
-    1440        // * estimated number of transactions per day after checkpoint
+    1599904294, // * UNIX timestamp of last checkpoint block
+    0,    // * total number of transactions between genesis and last checkpoint (the tx=... number in the UpdateTip debug.log lines)
+    0        // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
@@ -109,7 +107,7 @@ public:
 
         bnProofOfWorkLimit             = ~uint256(0) >> 20;
         nTargetTimespan                = 10 * 60;
-        nTargetSpacing                 = 1  * 60;  // OpulenceCoin: 1 minute blocks during POW (block 1-200)
+        nTargetSpacing                 = 1  * 60;  // OpulenceCoin: 1 minute blocks during POW (block 1-1000)
 
         bnProofOfStakeLimit            = ~uint256(0) >> 24;
         nTargetTimespanPOS             = 40 * 60;
@@ -117,13 +115,13 @@ public:
 
         nMaturity                      = 6; // 6 block maturity (+1 elsewhere)
         nMasternodeCountDrift          = 20;
-        nMaxMoneyOut                   = 2000000000 * COIN; // 16 million max supply
+        nMaxMoneyOut                   = 2000000000 * COIN; // 2 million max supply
 
         /** Height or Time Based Activations **/
         nLastPOWBlock                  = 1000;
-        nModifierUpdateBlock           = 1; // we use the version 2 for OPU
+        nModifierUpdateBlock           = 1; // we use the version 1 for OPU
 
-        const char* pszTimestamp       = "Opulence is not abundance. Opulence is the aesthetic of abundance 1594370872";
+        const char* pszTimestamp       = "Opulence is not abundance. Opulence is the aesthetic of abundance 1599904294";
 
         CMutableTransaction txNew;
         txNew.vin.resize(1);
@@ -131,20 +129,17 @@ public:
         txNew.vin[0].scriptSig         = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue           = 0 * COIN;
         txNew.vout[0].scriptPubKey     = CScript() << ParseHex("04b64a4bfcbe9bf8960687674c62650dca3b0292fad23f5e3d2761d44b7c7360dc4fc26cb386bc1ba91b1f914ffbdf5398c579f28eee1677a889582c91cc367877") << OP_CHECKSIG;
-
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock          = 0;
         genesis.hashMerkleRoot         = genesis.BuildMerkleTree();
         genesis.nVersion               = 1;
-        genesis.nTime                  = 1594370872;
+        genesis.nTime                  = 1599904294;
         genesis.nBits                  = 0x1e0ffff0;
-        genesis.nNonce                 = 422948;
-
+        genesis.nNonce                 = 2825889;
         hashGenesisBlock               = genesis.GetHash();
-        assert(hashGenesisBlock        == uint256("00000d7218da2eb87763bcbc0e2d5eb8c5f2258aa731e8eeff4578955817635b"));
-        assert(genesis.hashMerkleRoot  == uint256("7466400957e5f35a7590928cd328333f9f36aff348c47ab3914b691f41f39982"));
-
-        vSeeds.push_back(CDNSSeedData("opulencecoin.org", "seeds1.opulencecoin.org"));
+        assert(hashGenesisBlock        == uint256("0000078b683525388b21a5798120cee0eff69e4b2cb2830c2f9c4dd421c3dacb"));
+        assert(genesis.hashMerkleRoot  == uint256("1081338ecf5a484cad42db620027a9cf562632919affa5f1a0cf274d5a58a4ef"));
+        vSeeds.push_back(CDNSSeedData("opulencecoins.com", "seeds1.opulencecoins.com"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 55); // P
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 68); // U
