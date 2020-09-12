@@ -32,7 +32,7 @@
 #define NUM_ITEMS 7
 #define NUM_NEWS 4
 
-#define NEWS_URL "https://rfc.opulencecoin.org/category/news/feed/"
+#define NEWS_URL "https://rfc.opulencecoins.com/category/news/feed/"
 
 extern CWallet* pwalletMain;
 
@@ -356,19 +356,12 @@ void OverviewPage::showOutOfSyncWarning(bool fShow)
 void OverviewPage::SetLinks()
 {
     ui->labelLinks1->setText("Website:");
-    ui->labelLinks2->setText("Whitepaper:");
-    ui->labelLinks3->setText("Block Explorer:");
-    ui->labelLinks4->setText("Discord:");
-    ui->labelLinks5->setText("Twitter:");
-    ui->labelLinks6->setText("Github:");
-    ui->labelLinks7->setText("OPU Merchants");
+    ui->labelLinks2->setText("Block Explorer:");
+    ui->labelLinks3->setText("Github:");
 
-    ui->labelLinksUrl1->setText("<a href=\"https://www.opulencecoin.org\">https://www.opulencecoin.org</a>");
-    ui->labelLinksUrl2->setText("<a href=\"https://opulencecoin.org/go/whitepaper.pdf\">https://opulencecoin.org/go/whitepaper.pdf</a>");
-    ui->labelLinksUrl3->setText("<a href=\"http://explorer.opulencecoin.online\">http://explorer.opulencecoin.online</a>");
-    ui->labelLinksUrl4->setText("<a href=\"https://opulencecoin.org/go/discord\">https://opulencecoin.org/go/discord</a>");
-    ui->labelLinksUrl5->setText("<a href=\"https://opulencecoin.org/go/twitter\">https://opulencecoin.org/go/twitter</a>");
-    ui->labelLinksUrl6->setText("<a href=\"https://github.com/opulencecoin-official/opulencecoin\">https://github.com/opulencecoin-official/opulencecoin</a>");
+    ui->labelLinksUrl1->setText("<a href=\"https://www.opulencecoins.com\">https://www.opulencecoins.com</a>");
+    ui->labelLinksUrl2->setText("<a href=\"http://explorer.opulencecoins.com\">http://explorer.opulencecoins.com</a>");
+    ui->labelLinksUrl3->setText("<a href=\"https://github.com/opulencecoins/opulence-core\">https://github.com/opulencecoins/opulence-core</a>");
 }
 
 void OverviewPage::updateNewsList()
